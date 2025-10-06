@@ -1,18 +1,15 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
+
+const config: Config = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}', // For the App Router
-    './pages/**/*.{js,ts,jsx,tsx,mdx}', // For the Pages Router
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    // Add other directories if needed, e.g., './src/**/*.{js,ts,jsx,tsx,mdx}'
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      // You can extend Tailwind's default theme here,
-      // for example, by adding custom colors, fonts, or breakpoints.
-    },
+    extend: {},
   },
-  plugins: [
-    // Add any Tailwind CSS plugins here, e.g., require('@tailwindcss/typography')
-  ],
+  plugins: [animate],
 };
+
+export default config;
