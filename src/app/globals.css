@@ -115,7 +115,40 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+    @layer base {
+    :root {
+        --color-primary: #2563eb;
+        --color-primary-light: #3b82f6;
+        --color-primary-dark: #1e3a8a;
+    
+        --color-secondary: #f59e0b;
+        --color-background: #f9fafb;
+        --color-text: #111827;
+      }
+    
+      /* الوضع الليلي */
+      .dark {
+        --color-background: #111827;
+        --color-text: #f9fafb;
+      }
+    
+      /* تطبيق الألوان العامة */
+      body {
+        background-color: var(--color-background);
+        color: var(--color-text);
+      }
+    
+      /* الخطوط */
+      .font-poppins {
+        font-family: var(--font-poppins);
+      }
+    
+      .font-cairo {
+        font-family: var(--font-cairo);
+      }
+    }
 }

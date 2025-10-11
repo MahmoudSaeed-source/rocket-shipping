@@ -1,15 +1,40 @@
-import type { Config } from "tailwindcss";
-import animate from "tailwindcss-animate";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"],
   content: [
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["var(--font-poppins)"],
+        cairo: ["var(--font-cairo)"],
+      },
+      colors: {
+        // ألوان الوضع الفاتح
+       light: {
+    background: "#ffffff",
+    text: "#111827",
+    primary: "#2563eb",
+    secondary: "#6b7280",
+    accent: "#1c7ed6", // لون أزرق متدرج متفق عليه
   },
-  plugins: [animate],
+  dark: {
+    background: "#111827",
+    text: "#f9fafb",
+    primary: "#3b82f6",
+    secondary: "#9ca3af",
+    accent: "#86baf5", // اللون الثاني من التدرج
+  },
+      },
+        background: {
+          light: "#F9FAFB",
+          dark: "#111827",
+        },
+      },
+    },
+  },
+  plugins: [],
 };
-
-export default config;
