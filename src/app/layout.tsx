@@ -52,7 +52,7 @@ export default function RootLayout({
             <div className="w-full h-24  justify-center  relative bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text border-2 border-b-gray-300">
               <NavBar />
             </div>
-            <div className="w-full h-screen bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text">
+            <div className="w-full h-screen bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text p-4">
               {children}
             </div>
           </main>
