@@ -33,15 +33,12 @@ const data = [
 
 export default function MonthlyAverageChart() {
   return (
-    <Card className="w-full bg-white dark:bg-neutral-900 shadow-sm rounded-2xl">
-      {/* 🔸 عنوان الكارد */}
+    <Card className="w-full bg-white bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text shadow-sm rounded-2xl">
       <CardHeader>
         <CardTitle className="text-lg font-semibold text-gray-800 dark:text-gray-100">
           Monthly Delivery
         </CardTitle>
       </CardHeader>
-
-      {/* 🔸 محتوى الكارد */}
       <CardContent className="h-80">
         <ChartContainer
           config={{
@@ -53,8 +50,6 @@ export default function MonthlyAverageChart() {
         >
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data}>
-              
-
               {/* المحور الأفقي */}
               <XAxis
                 dataKey="month"

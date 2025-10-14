@@ -43,6 +43,7 @@ const NavBar = () => {
       </div>
       <div className="userprofile w-[40%] h-24 ml-4">
         <UserProfile/>
+       
       </div>
     </div>
   );

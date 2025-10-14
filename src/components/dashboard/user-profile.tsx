@@ -35,8 +35,8 @@ const UserProfile = () => {
       {open && (
         <div
           className="absolute top-24 right-16 w-52 rounded-md shadow-lg overflow-hidden 
-                  bg-light-background text-light-text 
-                  dark:bg-dark-background dark:text-dark-text 
+                  bg-dark-background text-light-text 
+                  dark:bg-light-background dark:text-dark-text 
                   border border-gray-200 dark:border-gray-700 z-50"
         >
           <div className="w-full h-12 bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text text-[12px]  p-2 mb-4  ">
