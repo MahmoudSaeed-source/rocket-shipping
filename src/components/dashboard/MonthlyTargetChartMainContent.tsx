@@ -3,7 +3,8 @@
 import * as React from "react";
 import { TrendingUp } from "lucide-react";
 import { Label, Pie, PieChart } from "recharts";
-
+import { FaLongArrowAltDown } from "react-icons/fa";
+import { FaLongArrowAltUp } from "react-icons/fa";
 import {
   Card,
   CardContent,
@@ -67,10 +68,7 @@ export function ChartPieDonutText() {
         <CardDescription>Target you’ve set for each month</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
-        <ChartContainer
-          config={chartConfig}
-          className="mx-auto aspect-square "
-        >
+        <ChartContainer config={chartConfig} className="mx-auto aspect-square ">
           <PieChart>
             <ChartTooltip
               cursor={false}
@@ -81,7 +79,7 @@ export function ChartPieDonutText() {
               dataKey="visitors"
               nameKey="browser"
               innerRadius={60}
-              strokeWidth={5}
+              strokeWidth={2}
             >
               <Label
                 content={({ viewBox }) => {
@@ -116,7 +114,7 @@ export function ChartPieDonutText() {
           </PieChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col gap-2 text-sm">
+      <CardFooter className="flex-col gap-1 text-sm">
         <div className="flex items-center gap-2 leading-none font-medium">
           deliver up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
@@ -124,8 +122,36 @@ export function ChartPieDonutText() {
           Showing total product dilverd for the last 6 months
         </div>
       </CardFooter>
-      <div>1</div>
+      <div className=" grid grid-cols-3 gap-4 shadow-md p-2 rounded-md  bg-light-background text-light-text dark:text-dark-text dark:tbg-dark-background">
+        <div className="flex-col justify-center items-center ">
+          <p className="flex justify-center items-center text-sm">Target</p>
+          <p className="w-full  flex justify-center items-center mt-2">
+            20K
+            <span>
+              <FaLongArrowAltDown className="text-red-400 ml-4 text-sm " />
+            </span>
+          </p>
+        </div>
+        <div className="flex-col justify-center items-center ">
+          <p className="flex justify-center items-center text-sm">Revenue</p>
+          <p className="w-full  flex justify-center items-center mt-3">
+            2K
+            <span>
+              <FaLongArrowAltUp className="text-green-400 mrl-4 text-sm " />
+            </span>
+          </p>
+        </div>
+        <div className="flex-col justify-center items-center ">
+          <p className="flex justify-center items-center text-sm">Today</p>
+          <p className="w-full  flex justify-center items-center mt-3">
+            18K
+            <span>
+              <FaLongArrowAltUp className="text-green-400 mrl-4 text-sm " />
+            </span>
+          </p>
+        </div>
+        
+      </div>
     </Card>
-    
   );
 }
