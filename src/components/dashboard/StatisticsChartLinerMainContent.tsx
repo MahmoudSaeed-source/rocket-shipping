@@ -57,16 +57,16 @@ export default function StatisticsChartDeliveries() {
     chartData.length;
 
   return (
-    <Card className="text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900">
+    <Card className="text-gray-900 bg-white dark:text-gray-100 dark:bg-gray-900 h-[700px] ">
       <CardHeader>
-        <CardTitle>Monthly Delivery Performance</CardTitle>
-        <CardDescription>
+        <CardTitle className="h-[40px] ">Monthly Delivery Performance</CardTitle>
+        <CardDescription className = "h-[40px]">
           Total deliveries (City & Remote) over the last 9 months
         </CardDescription>
       </CardHeader>
 
-      <CardContent>
-        <ChartContainer config={chartConfig}>
+      <CardContent className="h-[500px] ">
+        <ChartContainer config={chartConfig} className="h-[450px] w-full ">
           <AreaChart
             accessibilityLayer
             data={chartData}

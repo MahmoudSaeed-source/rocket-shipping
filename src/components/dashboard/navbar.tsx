@@ -2,12 +2,14 @@ import { IoSearchSharp } from "react-icons/io5";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { ModeToggle } from "../ui/mode-toggle";
 import UserProfile from "./user-profile";
+
 const NavBar = () => {
   return (
-    <div className="navContainer w-full  flex justify-start item-center font-poppins px-4">
-      <div className="searchSection h-24 w-[40%] flex items-center justify-start ">
+    <div className="flex items-center justify-start w-full h-24 px-4 font-poppins bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text transition-all duration-300">
+      {/* 🔍 Search Section - hidden on small screens */}
+      <div className="hidden md:flex items-center w-[40%]">
         <div
-          className="p-[2px] rounded-md transition-all duration-300 w-[80%]"
+          className="p-[2px] rounded-md transition-all duration-300 w-full"
           style={{
             background: "linear-gradient(45deg, #1c7ed6, #86baf5)",
           }}
@@ -17,23 +19,22 @@ const NavBar = () => {
               <IoSearchSharp className="absolute left-3 text-blue-500 text-xl" />
               <input
                 type="text"
-                className="h-12 w-full  bg-white rounded-md text-center border-none outline-none pl-10 text-gray-700 placeholder:text-gray-400 placeholder:italic placeholder:opacity-70  placeholder:font-poppins
-            placeholder:text-sm
-            focus:ring-2focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-100 transition-all duration-300"
+                className="h-12 w-full bg-white rounded-md border-none outline-none pl-10 text-gray-700 placeholder:text-gray-400 placeholder:italic placeholder:opacity-70 placeholder:font-poppins placeholder:text-sm focus:ring-2 focus:ring-blue-400 transition-all duration-300"
                 placeholder="Search or write a comment"
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="not-mode  w-[20%] h-24  flex items-center justify-end ml-44 ">
-        <div className="mode w-20 h-20   bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text  flex items-center justify-center">
-          <span className="w-16 h-16 rounded-full flex justify-center items-center   ">
-            <ModeToggle />
-          </span>
+
+      {/* ⚙️ Mode + Notifications */}
+      <div className=" lg:w[10%] w-[20%] flex items-center justify-center lg:justify-end gap-2 md:gap-4  lg:ml-20">
+        <div className="flex items-center justify-center">
+          <ModeToggle />
         </div>
-        <div className="not w-10 h-10   bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text  flex items-center justify-center relative ">
-          <span className="absolute -top-2 -right-1  text-blue-400 dark:text-gray-200">
+
+        <div className="relative flex items-center justify-center">
+          <span className="absolute -top-2 -right-2 text-sm text-blue-400 dark:text-gray-200">
             0
           </span>
           <div className="w-10 h-10 rounded-full flex justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-500 text-white dark:from-yellow-400 dark:to-orange-400 hover:opacity-90 transition-all">
@@ -41,9 +42,10 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <div className="userprofile w-[40%] h-24 ml-4">
-        <UserProfile/>
-       
+
+      {/* 👤 User Profile */}
+      <div className="flex items-center justify-center w-[80%] md:w-[30%] ">
+        <UserProfile />
       </div>
     </div>
   );

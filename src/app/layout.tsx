@@ -45,11 +45,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="w-64 h-screen border-r  flex flex-col overflow-hidden  p-0 m-0">
+          <div className=" hidden md:flex w-64 h-screen border-r   flex-col overflow-hidden  p-0 m-0">
             <SideBar />
           </div>
           <main className="flex-1 h-screen overflow-y-auto bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text flex-col ">
-            <div className="w-full h-24  justify-center  relative bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text border-2 border-b-gray-300">
+            <div className="w-full sm:flex h-24  justify-center  relative bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text border-2 border-b-gray-300">
               <NavBar />
             </div>
             <div className="w-full h-screen bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text p-4">

@@ -12,8 +12,8 @@ import { Button } from '../ui/button';
 const UserProfile = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="user-profile-container flex justify-center items-center ">
-      <div className="profile-image w-[18%] h-24 flex justify-center items-center rounded-full object-cover">
+    <div className="   user-profile-container flex justify-center items-center ">
+      <div className="profile-image w-[30%] lg:w-[18%] h-24 flex justify-center items-center rounded-full object-cover">
         <Image
           src={profileimage}
           alt="userImage"
@@ -22,8 +22,8 @@ const UserProfile = () => {
           className="rounded-full object-cover"
         />
       </div>
-      <div className="user-Name w-[60%] h-24 flex justify-center items-center relative">
-        <h3 className="capitalize font-poppins text-sm ">Mahmoud saeed</h3>
+      <div className="user-Name w-[80%] lg:w-[80%] h-24 flex justify-center items-center relative">
+        <h3 className="capitalize font-poppins text-sm w-[90%] md:w-[80%]  text-center  " >Mahmoud saeed</h3>
         <Button
           onClick={() => setOpen(!open)}
           className="w-8 h-8 p-2 ml-2 text-sm flex justify-center items-center  bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text hover:bg-gradient-to-r hover:from-[#1c7ed6]"

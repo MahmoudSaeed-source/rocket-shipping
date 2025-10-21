@@ -7,5 +7,4 @@ const MiddleContentMainContent = () => {
     </div>
   )
 }
-
 export default MiddleContentMainContent

@@ -28,7 +28,7 @@ const SideBar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="w-64 flex-col h-dvh fixed overflow-hidden items-center flex bg-light-background dark:bg-dark-background border-r border-gray-200 dark:border-gray-700 transition-colors duration-300">
+    <div className="hidden md:flex w-64  flex-col h-dvh fixed overflow-hidden items-center  bg-light-background dark:bg-dark-background border-r border-gray-200 dark:border-gray-700 transition-colors duration-300">
       <h1 className="w-full h-24 text-3xl uppercase text-accent-foreground border-b border-gray-200 dark:border-gray-700 items-center justify-center flex">
         <span className="font-cairo text-orange-600 text-4xl mr-1">
           <MdOutlineRocketLaunch />
