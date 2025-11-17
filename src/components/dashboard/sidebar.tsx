@@ -18,6 +18,7 @@ const menuItems = [
   { href: "/", label: "home", icon: <IoHomeOutline /> },
   { href: "/users", label: "users", icon: <FiUsers /> },
   { href: "/suppliers", label: "suppliers", icon: <CiDeliveryTruck /> },
+  { href: "/customers", label: "customers", icon: <FiUsers /> },
   { href: "/products", label: "products", icon: <AiFillProduct /> },
   { href: "/delegates", label: "delegates", icon: <MdOutlineDeliveryDining /> },
   { href: "/Analytics", label: "analytics", icon: <SiSimpleanalytics /> },

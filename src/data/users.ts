@@ -1,0 +1,48 @@
+import{UsersType} from "@/types/users"
+export const usersData: UsersType[] = [
+  {
+    id: "u-1",
+    name: "Sarah Johnson",
+    email: "sarah.johnson@rocketship.com",
+    role: "Admin",
+    status: "Active",
+    lastLogin: "2025-10-10T09:30:00Z",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+  },
+  {
+    id: "u-2",
+    name: "Michael Brown",
+    email: "michael.brown@rocketship.com",
+    role: "Manager",
+    status: "Active",
+    lastLogin: "2025-10-14T11:15:00Z",
+    avatar: "https://randomuser.me/api/portraits/men/45.jpg",
+  },
+  {
+    id: "u-3",
+    name: "Aisha Hassan",
+    email: "aisha.hassan@rocketship.com",
+    role: "Support",
+    status: "Inactive",
+    lastLogin: "2025-09-28T16:45:00Z",
+    avatar: "https://randomuser.me/api/portraits/women/23.jpg",
+  },
+  {
+    id: "u-4",
+    name: "David Miller",
+    email: "david.miller@rocketship.com",
+    role: "Dispatcher",
+    status: "Active",
+    lastLogin: "2025-10-15T08:10:00Z",
+    avatar: "https://randomuser.me/api/portraits/men/26.jpg",
+  },
+  {
+    id: "u-5",
+    name: "Emma Wilson",
+    email: "emma.wilson@rocketship.com",
+    role: "Finance",
+    status: "Active",
+    lastLogin: "2025-10-12T10:00:00Z",
+    avatar: "https://randomuser.me/api/portraits/women/34.jpg",
+  },
+];

@@ -29,7 +29,7 @@ const NavBar = () => {
 
       {/* ⚙️ Mode + Notifications */}
       <div className=" lg:w[10%] w-[20%] flex items-center justify-center lg:justify-end gap-2 md:gap-4  lg:ml-20">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center  text-orange-600 ">
           <ModeToggle />
         </div>
 
@@ -37,7 +37,7 @@ const NavBar = () => {
           <span className="absolute -top-2 -right-2 text-sm text-blue-400 dark:text-gray-200">
             0
           </span>
-          <div className="w-10 h-10 rounded-full flex justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-500 text-white dark:from-yellow-400 dark:to-orange-400 hover:opacity-90 transition-all">
+          <div className="w-10 h-10 rounded-full flex justify-center items-center bg-orange-600  text-white hover:opacity-90 transition-all">
             <IoIosNotificationsOutline />
           </div>
         </div>

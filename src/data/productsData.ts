@@ -1,4 +1,6 @@
-export const productsData = Array.from({ length: 30 }, (_, index) => {
+  import {ProductType} from "@/types/products"
+  
+  export const productsData :ProductType[] = Array.from({ length: 30 }, (_, index) => {
   const suppliers = [
     "sup-1", "sup-2", "sup-3", "sup-4", "sup-5",
     "sup-6", "sup-7", "sup-8", "sup-9", "sup-10",
